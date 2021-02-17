@@ -61,6 +61,12 @@ a {
     max-width: 120px;
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
+
+    transition: transform 133ms ease-in-out;
+}
+
+.thumbnail-item:hover {
+    transform: scale(1.2);
 }
 
 .thumbnail-list {
@@ -70,7 +76,7 @@ a {
     justify-content: space-between;
 
     list-style: none;
-    padding: 0;
+    padding: 20px 0;
 
     white-space: nowrap;
     overflow-x: auto;
@@ -100,10 +106,61 @@ a {
 .detail-image-frame {
     position: relative;
     text-align: center;
+    transition: transform 333ms;
+}
+
+.is-tiny {
+    transform: scale(0.001);
+    transition: transform 0ms;
 }
 
 .detail-image {
     width: 90%;
+    height: auto;
+}
+
+.detail-image-container .buttonLeft {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 20%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(100%, 100%, 100%, 0.0);
+    color: white;
+    font-size: 0px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.detail-image-container .buttonRight {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    width: 20%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(100%, 100%, 100%, 0.0);
+    color: white;
+    font-size: 0px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.detail-image-container .buttonLeft:hover {
+    background-color: rgba(100%, 100%, 100%, 0.2);
+    font-size: 16px;
+}
+
+.detail-image-container .buttonRight:hover {
+    background-color: rgba(100%, 100%, 100%, 0.2);
+    font-size: 16px;
 }
 
 .detail-image-title {
@@ -115,4 +172,17 @@ a {
     color: white;
     font-size: 40px;
     text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 6px;
+}
+
+.hidden-detail .detail-image-container {
+    display: none;
+}
+
+.hidden-detail .thumbnail-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-detail .thumbnail-item {
+    max-width: 80%;
 }
