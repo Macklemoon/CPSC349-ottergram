@@ -13,7 +13,11 @@ var ESC_KEY = 27;
 function setDetails(imageUrl, titleText) {
     'use strict';
     var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
+<<<<<<< HEAD
     detailImage.setAttribute('src', imageUrl);
+=======
+    detailImage.setAttribute('src', 'img/otter4.jpg');
+>>>>>>> parent of 614a00e... beautified
 
     var detailTitle = document.querySelector(DETAIL_TITLE_SELECTOR);
     detailTitle.textContent = titleText;
